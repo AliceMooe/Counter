@@ -37,6 +37,6 @@ const Counter = () => {
 
     </section>
   )
-}
+};
 
-export default Counter
+export default Counter;
