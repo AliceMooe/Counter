@@ -1,10 +1,10 @@
 import {useSelector,useDispatch} from "react-redux";
-import { counterActions } from "../Store/index";
+import { counterActions } from "../Store/counteReducer";
 
 const Counter = () => {
   const dispatch = useDispatch();
-  const counter = useSelector((state )=> state.counter);
-  const isShow = useSelector(state => state.isShow);
+  const counter = useSelector((state )=> state.counter.counter);
+  const isShow = useSelector(state => state.counter.isShow);
 
   
   const increaseHandler = () => {
@@ -21,7 +21,7 @@ const Counter = () => {
   };
   return (
     <section>
-        <h2 className="title is-5">Redux Counter</h2>
+        <h2>Redux Counter</h2>
         {isShow && <h1>{counter}</h1>}
         <hr />
      <div>
